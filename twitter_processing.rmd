@@ -1,0 +1,22 @@
+---
+title: "Sentiment Analysis of Star Wars: The Last Jedi Tweets"
+output: html_notebook
+---
+```{r}
+library(rtweet)
+library(tidyverse)
+```
+
+Setup Twitter API Credentials
+```{r}
+consumer_key <- "rZnVMhaP8qCFUlPZ4E6hgkReN"
+consumer_secret <- "oNZwU4VxXHbZLlzWzmu1P8skCGa0z1YOEeK5BVPwOscXih0fys"
+appname = "SWSA"
+
+create_token(app = appname, consumer_key, consumer_secret)
+```
+
+```{r}
+tweets.df <- search_tweets(q = "Star Wars", n = 5000)
+```
+
